@@ -27,7 +27,7 @@ fi
 echo "Creating Resource Group...";
 az group create \
     -n $resourceGroup \
-    -l $location
+    -l "westus"
 
 echo "Deploying Static Web App...";
 az deployment group create \
@@ -39,7 +39,7 @@ az deployment group create \
     location=$location \
     repositoryToken=$gitToken \
     repositoryUrl=$gitSource \
-    branch="v3.0" \
+    branch="master" \
     appLocation="./client" \
     apiLocation="./api" \
     azureSQL="$azureSQL"
