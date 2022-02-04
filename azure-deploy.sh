@@ -29,7 +29,7 @@ az group create \
     -n $resourceGroup \
     -l "westus"
 
-echo "Deploying Static Web App...";
+echo "Deploying Static Web App..";
 az deployment group create \
   --name "swa-deploy-3.0" \
   --resource-group $resourceGroup \
